@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FocusFlow</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .start {
+            background: green;
+            color: white;
+        }
+
+        .break {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>FocusFlow</h2>
+    <p id="status">Status: Idle</p>
+
+    <button class="start" onclick="startSession()">Start Session</button>
+    <button class="break" onclick="takeBreak()">Take Break</button>
+</div>
+
+<script>
+function startSession() {
+    document.getElementById("status").innerText = "Studying...";
+}
+
+function takeBreak() {
+    document.getElementById("status").innerText = "Break Recommended";
+}
+</script>
+
+</body>
+</html>
